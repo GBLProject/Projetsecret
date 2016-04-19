@@ -21,18 +21,15 @@
                             echo "<tr>";   
                           for ($j=0; $j<10; $j++) {
                               echo" <td>";
-                              $tableau[$i][$j]=rand(0,1);
-                              echo  $tableau[$i][$j];
-                              /*$aleatoire = rand(0,10);
-                                if($aleatoire > 2){echo 1;}
-                                else{ echo 0;}
-                               
-                               */
-                              
-                              
+                                $tableau[$i][$j]=rand(0,1);
+                               // echo "<form action=\"./index.php\" method=\"get\">";
+                                echo " <a  href=\"index.php?hauteur=$j&largeur=$i \> ";
+                                echo  $tableau[$i][$j];
+                                echo "</a>";
+                               // echo "<form>";
                               echo "</td>";
                              }      
-                                  echo "</tr>";
+                              echo "</tr>";
                          }
                          echo " </table>";
                        
