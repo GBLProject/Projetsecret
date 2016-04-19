@@ -2,7 +2,7 @@
 
 <i> -------  Projet "Lights Out" par le groupe Geoffroy Latour - Baptiste Millot - Louis Krempp --------</i>
  
- <ul>Première étape intermédiaire :</ul>
+ <u>Première étape intermédiaire :</u>
  Création de la page web en PHP à l'aide d'un tableau généré d'abord aléatoirement puis ensuite défini par l'utilisateur.
  Chaque case du tableau est soit allumée soit éteinte.
  
