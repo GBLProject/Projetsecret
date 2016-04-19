@@ -4,8 +4,23 @@
         <title>LIGHTS OUT ! GBL</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cssPrincipal.css" type="text/css"/>
     </head>
     <body>
-        
+        <section id="wrapper">
+            <article id="parametrage">
+                <input type="number" name="largeur" placeholder="Largeur" class="boutonInput">
+                <input type="number" name="longueur" placeholder="Longueur" class="boutonInput">
+                <br>
+                <button type="submit" name="confirmer" id="boutonOK">OK</button>
+
+                <br>
+                <div class="boutonConfig">
+                    <button type="submit" name="alea">Générer <br> Aléatoirement</button>
+                    <button type="submit" name="predefini">Prédéfinir <br> Le tableau </button>
+                </div>
+            </article>
+            <article id="jeu"></article>
+        </section>
     </body>
 </html>
