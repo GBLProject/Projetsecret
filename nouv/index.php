@@ -16,42 +16,26 @@
                         <?php
                         
                        function creation_aff(){
+                           $hauteur=10;
+                           $largeur = 10;
+                          
                            
-                        echo "<table>";
-                        for ($i=0; $i<10; $i++) {
-                            echo "<tr>";   
-                          for ($j=0; $j<10; $j++) {
-                              echo" <td>";
-                                $tableau[$i][$j]=rand(0,1);
-                               // echo "<form action=\"./index.php\" method=\"get\">";
-                                echo " <a  href=\"index.php?hauteur=$j&largeur=$i \> ";
-                                echo  $tableau[$i][$j];
-                                echo "</a>";
-                               // echo "<form>";
-                              echo "</td>";
-                             }      
-                              echo "</tr>";
-                         }
-                         echo " </table>";
+                           for($n = 0 ;$n < $hauteur;$n++)
+                           {
+                           for ($i=0;$i<$largeur;$i++)
+                           {
+                              
+                              $matrice[$n][$i]= 0; 
+                            
+                                echo " <a  href=\"index.php?hauteur = $i&largeur = $ n>"; // rends la case cliquable mais buf tjrs cf url
+                                echo $matrice[$n][$i];
+                                echo "</a> ";
+                               
+                           }
+                           echo"<br/>";
                        }
-                        creation_aff()
-                        /*
-                        session_start();
-                        if (isset($_SESSION["light"])) {
-                            $light = $_SESSION["light"]; 
-                         }
-                         else{
-                             $terre = new Monde(5,5);
-                             $_SESSION["light"]= $light;  
-                         }
-                        
-                        $terre->afficher();
-                        $terre->tourSuivant();
-                        $_SESSION["terre"]= $terre;
-                        
-                        */
-                       
-                        
+                       }
+                       creation_aff();
                         
                         ?>
                             
