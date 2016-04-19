@@ -15,7 +15,8 @@
                         
                         <?php
                         
-                       
+                       function creation_aff(){
+                           
                         echo "<table>";
                         for ($i=0; $i<10; $i++) {
                             echo "<tr>";   
@@ -32,8 +33,8 @@
                               echo "</tr>";
                          }
                          echo " </table>";
-                       
-                        
+                       }
+                        creation_aff()
                         /*
                         session_start();
                         if (isset($_SESSION["light"])) {
