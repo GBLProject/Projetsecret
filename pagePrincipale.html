@@ -8,24 +8,25 @@
     </head>
     <body>
         <header>
-            <h1>LIGHTS OUT !</h1>
-        </header>
-        <section id="wrapper">
-            <article id="parametrage">
+            <div id="Param">
                 <input type="number" name="largeur" placeholder="Largeur" class="boutonInput" min="0" max="64">
                 <input type="number" name="longueur" placeholder="Longueur" class="boutonInput" min="0" max="64">
-                <br>
-                <button type="submit" name="confirmer" id="boutonOK">OK</button >
+            </div>
+            <button id="boutonOK">OK</button>
+            <img src="images/title.png" id="title" />
+            <form action="/predefinir.php" method="get">
+                <button type="submit" name="param" value="alea" id="first">Générer <br> Aléatoirement</button>
+            </form>
+            <div class="wrapsecond">
+                <form action="/predefinir.php" method="get">
+                    <button type="submit"  name="predef" id = "second">Prédéfinir le<br>tableau</button>
 
-                <br>
-                <div class="boutonConfig">
-                    
-                    <button type="submit" name="param" value="alea" id="first">Générer <br> Aléatoirement</button>
-                    <form action="/predefinir.php" method="get">
-                        <button type="submit"  name="predef" id="second">Prédéfinir le<br>tableau</button>
-                    </form>
-                </div>
-            </article>
+                </form>
+            </div>
+
+            .
+        </header>
+        <section id="wrapper">
             <article id="jeu"></article>
         </section>
     </body>
