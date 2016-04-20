@@ -1,0 +1,79 @@
+<?php
+
+
+
+// Un monde est l'univers du jeu de la vie, composé d'organismes constituant une
+// matrice qui se met à jour selon les règles de naissance et de mort des organismes
+// en fonction de leurs voisins directs
+
+
+
+class objet_tableau {
+    public $hauteur;
+    public $largeur;
+    public $tableau;
+   
+
+
+
+    // Taille de la matrice constituant le monde
+    // La matrice carrée
+
+    // Constructeur d'un monde
+    function __construct($hauteur, $largeur) {
+        $this->hauteur= $hauteur; 
+        $this->largeur= $largeur; 
+        echo "<table>";
+        for ($i=0; $i<$this->hauteur; $i++) {
+            echo "<tr>";   
+          for ($j=0; $j<$this->largeur; $j++) {
+               echo" <td   >";
+              $this->tableau[$i][$j]=rand(0,1); 
+              if($this->tableau[$i][$j]==1){echo "<a href=\"index.php?hauteur=$j&largeur=$i\"> <img src=\"allumer.png\" alt=\"HTML5 Icon\" style=\"width:58px;height:58px;\"> </a>";}
+              else {echo "<a href=\"index.php?hauteur=$j&largeur=$i\"> <img src=\"eteint.png\" alt=\"HTML5 Icon\" style=\"width:58px;height:58px;\"> </a>";}
+              echo "<td>";
+             }      
+              echo "</tr>";
+         }
+         echo " </table>";
+    }
+
+    // Affichage d'un monde faisant appel à l'affichage des cellules qui le composent
+    function afficher() {
+      echo "<table>";
+        for ($i=0; $i<$this->hauteur; $i++) {
+            echo "<tr>";   
+          for ($j=0; $j<$this->largeur; $j++) {
+               echo" <td   >";
+              
+              if($this->tableau[$i][$j]==1){echo "<a href=\"index.php?hauteur=$j&largeur=$i\"> <img src=\"allumer.png\" alt=\"HTML5 Icon\" style=\"width:58px;height:58px;\"> </a>";}
+              else {echo "<a href=\"index.php?hauteur=$j&largeur=$i\"> <img src=\"eteint.png\" alt=\"HTML5 Icon\" style=\"width:58px;height:58px;\"> </a>";}
+              echo "<td>";
+             }      
+              echo "</tr>";
+         }
+         echo " </table>";
+    }
+    
+    
+     function next($hauteur, $largeur) {
+         
+              $this->tableau[$hauteur][$largeur]=!$this->tableau[$hauteur][$largeur];
+              if($hauteur<4){
+                  $this->tableau[$hauteur+1][$largeur]=!$this->tableau[$hauteur+1][$largeur];
+              }
+               if($hauteur>0){
+                  $this->tableau[$hauteur-1][$largeur]=!$this->tableau[$hauteur-1][$largeur];
+              }
+               if($largeur<4){
+                  $this->tableau[$hauteur][$largeur+1]=!$this->tableau[$hauteur][$largeur+1];
+              }
+               if($largeur>0){
+                  $this->tableau[$hauteur][$largeur-1]=!$this->tableau[$hauteur][$largeur-1];
+              }
+              
+        
+     }
+    
+    
+}
