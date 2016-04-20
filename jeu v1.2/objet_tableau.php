@@ -23,20 +23,14 @@ class objet_tableau {
     function __construct($hauteur, $largeur) {
         $this->hauteur= $hauteur; 
         $this->largeur= $largeur; 
-        echo "<table>";
-        for ($i=0; $i<$this->hauteur; $i++) {
-            echo "<tr>";   
+        for ($i=0; $i<$this->hauteur; $i++) {  
           for ($j=0; $j<$this->largeur; $j++) {
-               echo" <td   >";
               $this->tableau[$i][$j]=rand(0,1); 
-              if($this->tableau[$i][$j]==1){echo "<a href=\"index.php?hauteur=$j&largeur=$i\"> <img src=\"allumer.png\" alt=\"HTML5 Icon\" style=\"width:58px;height:58px;\"> </a>";}
-              else {echo "<a href=\"index.php?hauteur=$j&largeur=$i\"> <img src=\"eteint.png\" alt=\"HTML5 Icon\" style=\"width:58px;height:58px;\"> </a>";}
-              echo "<td>";
-             }      
-              echo "</tr>";
+              
+             }    
          }
-         echo " </table>";
     }
+    
 
     // Affichage d'un monde faisant appel à l'affichage des cellules qui le composent
     function afficher() {
@@ -59,13 +53,13 @@ class objet_tableau {
      function next($hauteur, $largeur) {
          
               $this->tableau[$hauteur][$largeur]=!$this->tableau[$hauteur][$largeur];
-              if($hauteur<4){
+              if($hauteur<$this->hauteur-1){
                   $this->tableau[$hauteur+1][$largeur]=!$this->tableau[$hauteur+1][$largeur];
               }
                if($hauteur>0){
                   $this->tableau[$hauteur-1][$largeur]=!$this->tableau[$hauteur-1][$largeur];
               }
-               if($largeur<4){
+               if($largeur<$this->largeur-1){
                   $this->tableau[$hauteur][$largeur+1]=!$this->tableau[$hauteur][$largeur+1];
               }
                if($largeur>0){
