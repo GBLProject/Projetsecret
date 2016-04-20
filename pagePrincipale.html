@@ -7,17 +7,23 @@
         <link rel="stylesheet" href="cssPrincipal.css" type="text/css"/>
     </head>
     <body>
+        <header>
+            <h1>LIGHTS OUT !</h1>
+        </header>
         <section id="wrapper">
             <article id="parametrage">
-                <input type="number" name="largeur" placeholder="Largeur" class="boutonInput">
-                <input type="number" name="longueur" placeholder="Longueur" class="boutonInput">
+                <input type="number" name="largeur" placeholder="Largeur" class="boutonInput" min="0" max="64">
+                <input type="number" name="longueur" placeholder="Longueur" class="boutonInput" min="0" max="64">
                 <br>
-                <button type="submit" name="confirmer" id="boutonOK">OK</button>
+                <button type="submit" name="confirmer" id="boutonOK">OK</button >
 
                 <br>
                 <div class="boutonConfig">
-                    <button type="submit" name="alea">Générer <br> Aléatoirement</button>
-                    <button type="submit" name="predefini">Prédéfinir <br> Le tableau </button>
+                    
+                    <button type="submit" name="param" value="alea" id="first">Générer <br> Aléatoirement</button>
+                    <form action="/predefinir.php" method="get">
+                        <button type="submit"  name="predef" id="second">Prédéfinir le<br>tableau</button>
+                    </form>
                 </div>
             </article>
             <article id="jeu"></article>

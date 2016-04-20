@@ -4,17 +4,34 @@ body{
 
 }
 
+body > header{
+    width: 290px;
+    height: 100px;
+    margin: auto;
+    padding-left: 60px;
+    padding-top: 20px;
 
-#wrapper{
+
+    background-color: indianred;
+    color: ivory;
+    font-family: Courrier New;
+
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px black;
+
+
+}
+body > section#wrapper{
+    margin-left: 5%;
     float: left;
     clear:none;
 }
-#parametrage{
+body > section#wrapper > article#parametrage{
 
     width: 200px;
     height: 150px;
     float:left;
-    
+
     margin-top: 30%;
     margin-left: 50px;
     margin-right: 20px;
@@ -25,19 +42,29 @@ body{
     border-radius:5px;
 }
 
-#boutonOK{
-    margin-left: 40%;
-    margin-top:2%;
-}
-.boutonInput{
+
+body > section#wrapper > article > input.boutonInput{
     margin-top: 5%;
     width: 95%;
 }
-.boutonConfig{
+body > section > article > button#boutonOK{
+    margin-left: 40%;
+    margin-top:2%;
+}
+body > section > article > div.boutonConfig{
     margin-top: 5%;
+    float: left;
+    clear:none;
+
+}
+body > section > article > div.boutonConfig > #first{
+    float: left;
+}
+body > section > article > div.boutonConfig > form{
+    float: right;
 }
 
-#jeu{
+body > section > article#jeu{
     width: 300px;
     height: 300px;
     float:right;
