@@ -24,7 +24,7 @@
             </form>
             <div class="wrapsecond">
                 <form action="index.php" method="get">
-                    <button type="submit"   id = "second">Validé le<br>tableau</button>
+                    <button type="submit"   id = "second">Valider le<br>tableau</button>
 
                 </form>
             </div>
