@@ -10,27 +10,24 @@
     </head>
     <body>
         <header>
-             
-            <form action="zero.php" method="get" id="Param"  >
-               
+            <form id="wrapLeft" action="zero.php" method="get">
                 <input type="number" name="largeur" placeholder="Largeur" class="boutonInput" min="0" max="64">
-                <input type="number" name="hauteur" placeholder="Longueur" class="boutonInput" min="0" max="64">
-                <button id="boutonOK" type="submit">OK</button>
-               
-            
-             </form>
-            <img src="images/title.png" id="title" />
-            <form action="zero.php" method="get">
-                <button type="submit"  id="first">Générer <br> Aléatoirement</button>
+                <input type="number" name="longueur" placeholder="Longueur" class="boutonInput" min="0" max="64">
+                <button id="boutonOK">OK</button>
             </form>
-            <div class="wrapsecond">
+            <span id="Centerer">
+                <img src="images/title.png" id="title" alt=""/>
+            </span>
+            <div id="wrapRight">
+                <form action="zero.php" method="get">
+                    <button type="submit"  class="choixBouton" id="first">Générer <br> Aléatoirement</button>
+                </form>
+
                 <form action="personalisation.php" method="get">
-                    <button type="submit"   id = "second">Prédéfinir le<br>tableau</button>
+                    <button type="submit"   class="choixBouton" id="second">Prédéfinir le<br>tableau</button>
 
                 </form>
             </div>
-
-            
         </header>
         <section id="wrapper">
             <article id="jeu">
