@@ -29,43 +29,40 @@
                 </form>
             </div>
         </header>
-        <section id="wrapper">
+        <section id="gameWrapper">
             <article id="jeu">
-            
-            
-            
-            
+
+
+
+
                 <?php
-                 require_once "./objet_tableau.php";
+                require_once "./objet_tableau.php";
                 session_start();
                 if (isset($_SESSION["light"])) {    #si il existe deja une session
-                    $light = $_SESSION["light"];  
-                    
+                    $light = $_SESSION["light"];
+
                     if (filter_input_array(INPUT_GET)) {  #on recupère la position de la case précédement coché
                         $hauteur = htmlspecialchars(trim(filter_input(INPUT_GET, "hauteur")));
                         $largeur = htmlspecialchars(trim(filter_input(INPUT_GET, "largeur")));
-                        $light->next($largeur,$hauteur); //en fonction de la hauteur et de la largeur de la case précèdement coché, on change l'etat du tableau
-                     }
+                        $light->next($largeur, $hauteur); //en fonction de la hauteur et de la largeur de la case précèdement coché, on change l'etat du tableau
+                    }
                     $light->afficher();
-                    $_SESSION["light"]= $light;  //on enregistre 
-                    
-                 }
-                 else{
-                     $light = new objet_tableau(5,5);  //création objet, tableau
-                      $light->afficher();
-                     $_SESSION["light"]= $light; //on enregistre 
-                     
-                 }
-                 
-                 $light->jeuVictoire()
+                    $_SESSION["light"] = $light;  //on enregistre 
+                } else {
+                    $light = new objet_tableau(5, 5);  //création objet, tableau
+                    $light->afficher();
+                    $_SESSION["light"] = $light; //on enregistre 
+                }
+
+                $light->jeuVictoire()
                 ?>
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
             </article>
         </section>
     </body>
