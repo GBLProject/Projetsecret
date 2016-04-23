@@ -18,14 +18,16 @@
 
                 <button id="boutonOK">OK</button>
             </form>
-            <img src="images/title.png" id="title" />
+            <span id="Centerer">
+                <img src="images/title.png" id="title" alt=""/>
+            </span>
             <div id="wrapRight">
                 <form action="zero.php" method="get">
-                    <button type="submit"  id="first">Générer <br> Aléatoirement</button>
+                    <button type="submit"  class="choixBouton" id="first">Générer <br> Aléatoirement</button>
                 </form>
 
                 <form action="index.php" method="get">
-                    <button type="submit"   id = "second">Valider le<br>tableau</button>
+                    <button type="submit"   class="choixBouton" id="second">Valider le<br>tableau</button>
 
                 </form>
             </div>
