@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LIGHTS OUT ! GBL</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cssPrincipal.css" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <div id="Param">
+                <input type="number" name="largeur" placeholder="Largeur" class="boutonInput" min="0" max="64">
+                <input type="number" name="longueur" placeholder="Longueur" class="boutonInput" min="0" max="64">
+            </div>
+            <button id="boutonOK">OK</button>
+            <img src="images/title.png" id="title" />
+            <form action="/predefinir.php" method="get">
+                <button type="submit" name="param" value="alea" id="first">Générer <br> Aléatoirement</button>
+            </form>
+            <div class="wrapsecond">
+                <form action="/predefinir.php" method="get">
+                    <button type="submit"  name="predef" id = "second">Prédéfinir le<br>tableau</button>
+
+                </form>
+            </div>
+
+            .
+        </header>
+        <section id="wrapper">
+            <article id="jeu"></article>
+        </section>
+    </body>
+</html>
